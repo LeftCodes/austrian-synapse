@@ -60,16 +60,6 @@ export function initGeoJSONLayer(map, onReady) {
       data: geojson,
     });
 
-    // map.addLayer({
-    //   id: "countries-fill",
-    //   type: "fill",
-    //   source: "countries",
-    //   paint: {
-    //     "fill-color": "rgba(255,255,255,0.1)",
-    //     "fill-outline-color": "rgba(255,255,255,0.3)",
-    //   },
-    // });
-
     // Expose zoomToCountry to parent
     onReady?.({ zoomToCountry });
   });
