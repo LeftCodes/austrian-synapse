@@ -27,7 +27,7 @@ export function setLayers(map) {
       id === "water" || // oceans (polygons)
       id.includes("land") || // continents
       id.includes("background") || // globe background
-      // id.includes("admin") || // borders
+      id.includes("admin") || // borders
       // id.includes("country-label") || // country names
       id.includes("place-label"); // city names
 
@@ -43,7 +43,6 @@ export function setLayers(map) {
   if (map.getLayer("land")) {
     map.setPaintProperty("land", "background-color", "#2B1B2B");
   }
-
   if (map.getLayer("sky")) {
     map.setPaintProperty("sky", "sky-color", "#aaaaaa"); // bright white
     map.setPaintProperty("sky", "sky-opacity", 1);
@@ -61,15 +60,15 @@ export function initGeoJSONLayer(map, onReady) {
       data: geojson,
     });
 
-    map.addLayer({
-      id: "countries-fill",
-      type: "fill",
-      source: "countries",
-      paint: {
-        "fill-color": "rgba(255,255,255,0.1)",
-        "fill-outline-color": "rgba(255,255,255,0.3)",
-      },
-    });
+    // map.addLayer({
+    //   id: "countries-fill",
+    //   type: "fill",
+    //   source: "countries",
+    //   paint: {
+    //     "fill-color": "rgba(255,255,255,0.1)",
+    //     "fill-outline-color": "rgba(255,255,255,0.3)",
+    //   },
+    // });
 
     // Expose zoomToCountry to parent
     onReady?.({ zoomToCountry });
