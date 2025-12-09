@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --breakpoint-3xl: 120rem;
+  --color-black: black;
+
+  --color-text: var(--color-black);
+}
+
+@layer base {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  a,
+  div,
+  button {
+    color: var(--color-white);
+  }
+
+  html,
+  body,
+  main {
+    /* Firefox */
+    scrollbar-width: none;
+    /* IE/old Edge */
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    /* Chrome/Safari */
+    display: none;
+  }
+
+  body,
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
