@@ -42,4 +42,8 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
+
+  .mapboxgl-ctrl-logo, .mapboxgl-ctrl-attrib {
+    display: none !important;
+  }
 }

@@ -8,7 +8,7 @@ function MapInfos() {
 
       <div className="mt-8">
         <p>Wieviele Synapsen?</p>
-        <p>Energie</p>
+        <p>Energie?</p>
         <p>Gewicht?</p>
       </div>
     </div>
